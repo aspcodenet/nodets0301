@@ -34,7 +34,7 @@ export async function findByName(name:string) : Promise<Product|null>{
 
 
 export async function createIfNotExists() {
-    await (await connection).execute("CREATE TABLE IF NOT EXISTS `Products` (        `id` int NOT NULL AUTO_INCREMENT,         `name` varchar(255) DEFAULT NULL,         `unitPrice` int DEFAULT NULL,         `stockLevel` int DEFAULT NULL,         `createdAt` datetime NOT NULL,        `updatedAt` datetime NOT NULL,         PRIMARY KEY (`id`)       ) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;")
+    await (await connection).execute("CREATE TABLE IF NOT EXISTS `Products` (        `id` int NOT NULL AUTO_INCREMENT,         `name` varchar(255) DEFAULT NULL,         `unitPrice` int DEFAULT NULL,         `stockLevel` int DEFAULT NULL,         `createdAt` datetime NOT NULL,        `updatedAt` datetime NOT NULL,         PRIMARY KEY (`id`)       ) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4;")
 }
 
 
